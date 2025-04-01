@@ -7,7 +7,8 @@ app = Flask(__name__)
 CORS(app)  # Enable Cross-Origin Requests
 
 # Load trained ML model
-model = pickle.load(open('ML1', 'rb'))
+model = pickle.load(open('ML1', 'rb'))  # Make sure 'ML1' exists in the root folder
+
 
 # Prediction API
 @app.route('/predict', methods=['POST'])
